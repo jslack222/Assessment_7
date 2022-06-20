@@ -2,7 +2,6 @@ const perf = require("execution-time")();
 //Step 2: Write Code
 
 //1. Sum Zero (a.k.a play on words that refers to sub zero from mortal kombat)
-
 function subZero() {
   let array = [1, 2, 3, 4, 5, 6, 7, 87, 5, 0, 4, 5, 6, 0];
   for (let i = 0; i < array.length; i++) {
@@ -49,7 +48,7 @@ console.log("runtime", resultsUniqChar.preciseWords);
 // Answers: 
 
 //runtime 26.7 μs
-//space complexity of O(n)
+//space complexity of O(1)
 
 //3. Pangram Sentance
 function pangrams(s) {
@@ -77,7 +76,7 @@ console.log("runtime", resultsPangrams.preciseWords);
 //Answers:
 
 //runtime 17.5 μs
-//space complexity is O(1)
+//space complexity is O(n)
 
 //4. Longest Word
 function findLongestWord(str) {
