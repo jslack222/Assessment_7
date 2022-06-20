@@ -1,0 +1,87 @@
+Observation of the diffences between when the function is passed in
+both the doublerAppend function and the doublerInsert function in
+that the doublerAppend function is passed much faster then it is 
+passed in the doublerInsert function. Here is the log for further
+context & proof of statement. 
+insert 1.0050383 s
+append 5.3452 ms
+
+Note: 
+1st function stated is always invoked in the doublerAppend()
+2nd function stated is always invoked in the doublerInsert()
+
+1. smallArray compared with tinyArray
+insert 118.6 μs
+append 210.5 μs
+tinyArray scaled better 
+
+2. tinyArray compared with mediumArray
+insert 335.8 μs
+append 175.8 μs
+mediumArray scales better in this case
+tinyArray scaled better
+
+3. smallArray compared with mediumArray
+insert 178.1 μs
+append 139.1 μs
+smallArray scaled better
+
+4. tinyArray compared with largeArray
+insert 14.3482 ms
+append 211.8 μs
+tinyArray scaled better
+
+5. tinyArray compared with extraLargeArray
+insert 1.0186314 s
+append 332.5 μs
+tinyArray scaled better
+
+6. mediumArray compared to extraLargeArray
+insert 970.1421 ms
+append 224.7 μs
+mediumArray scaled better
+
+7. mediumArray compared with largeArray 
+insert 10.725 ms
+append 183.2 μs
+mediumArray scaled better
+
+8. smallArray compared with largeArray
+insert 11.5876 ms
+append 97.3 μs
+smallArray scaled better
+
+9. smallArray compared with extraLargeArray
+insert 987.8387 ms
+append 92.8 μs
+smallArray scaled better
+
+10. largeArray compared with extraLargeArray
+insert 975.4191 ms
+append 1.1968 ms
+largeArray scaled better
+
+Extra Credit 1: 
+
+.unshift() is in the doublerInsert function and is inherently slower because
+it has to look at the index of the array go all the way to the front
+and push back the index number of each part of the array after it when the 
+user invokes the function. 
+.push() which is in the doublerAppend function only has to add that value that
+user inputs to the back of the array which makes the runtime of this function
+way shorter. 
+
+Paragraph: 
+
+Each function scales by looping through the array and adding the desired 
+amount of integers to the index of the existing array. The larger the value 
+that the user inputs into the function the longer it takes to for that function
+to pass. As stated above there is also a difference between .unshift() 
+and .push() that affects the speed of the function. More info about that is 
+provided above. By which of the two functions scale better I assume you mean
+which functions passes at a more efficient pace. Following that premise I stated 
+which function scaled better in the numbered list above.
+
+
+
+Please refer to assessment.js for step 2 of assessment
